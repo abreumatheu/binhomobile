@@ -1,0 +1,158 @@
+/* Estilos gerais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2e7d32;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.logo-imagem {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+header .botao-emergencia, header .botao-ligar {
+    background-color: #66bb6a;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.botao-ligar {
+    background-color: #43a047;
+}
+
+/* Navegação Mobile */
+.mobile-nav .menu-toggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.menu {
+    display: none;
+    list-style: none;
+}
+
+.menu-toggle:hover + .menu {
+    display: block;
+}
+
+/* Banner */
+.banner {
+    background-color: #2e7d32;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+}
+
+.texto-banner h2 {
+    font-size: 2rem;
+}
+
+.botao-acao, .botao-ligar {
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+/* Sobre */
+.sobre {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.sobre p {
+    font-size: 1.2rem;
+}
+
+/* Serviços */
+.servicos {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.servico-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.servico-item {
+    width: 250px;
+    margin: 15px;
+}
+
+/* Solicitar Assistência */
+.solicitar {
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+}
+
+.solicitar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.localizacao-btn {
+    margin-top: 10px;
+    background-color: #2e7d32;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+.botao-enviar {
+    background-color: #66bb6a;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+
+    .servico-item {
+        width: 100%;
+    }
+}
