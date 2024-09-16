@@ -1,4 +1,4 @@
-/* Fonte padrão */
+/* Estilos gerais */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -13,6 +13,10 @@ header {
     align-items: center;
     background-color: #2e7d32;
     padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .logo-imagem {
@@ -41,6 +45,7 @@ header .botao-ligar {
     border: none;
     color: white;
     font-size: 1.4rem;
+    cursor: pointer;
 }
 
 .menu {
@@ -61,18 +66,20 @@ header .botao-ligar {
 /* Banner */
 .banner {
     background-color: #2e7d32;
-    padding: 50px 20px;
+    padding: 100px 20px;
     text-align: center;
     color: white;
 }
 
 .texto-banner h2 {
     font-size: 2.4rem;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .texto-banner p {
     font-size: 1.2rem;
     margin: 10px 0;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
 .botao-acao, .botao-ligar {
@@ -83,11 +90,17 @@ header .botao-ligar {
     color: white;
     border-radius: 5px;
     text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.botao-acao:hover, .botao-ligar:hover {
+    background-color: #43a047;
+    transform: translateY(-3px);
 }
 
 /* Seção Sobre */
 .sobre {
-    padding: 40px 20px;
+    padding: 60px 20px;
     background-color: #fff;
     text-align: center;
 }
@@ -95,16 +108,18 @@ header .botao-ligar {
 .sobre h2 {
     font-size: 2rem;
     margin-bottom: 20px;
+    animation: slideIn 1.5s ease-in-out;
 }
 
 .sobre p {
     font-size: 1.2rem;
     line-height: 1.6;
+    animation: slideIn 2s ease-in-out;
 }
 
 /* Serviços */
 .servicos {
-    padding: 40px 20px;
+    padding: 60px 20px;
     background-color: #f4f4f9;
     text-align: center;
 }
@@ -213,6 +228,27 @@ footer {
     padding: 20px;
 }
 
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
     header h1 {
@@ -223,12 +259,16 @@ footer {
         width: 100%;
         margin-bottom: 20px;
     }
-    
+
     .texto-banner h2 {
         font-size: 2rem;
     }
 
     .botao-acao, .botao-ligar {
         width: 100%;
+    }
+
+    .menu {
+        display: block;
     }
 }

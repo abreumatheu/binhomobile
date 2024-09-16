@@ -1,3 +1,9 @@
+document.getElementById('menu-toggle').addEventListener('click', function () {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+    this.classList.toggle('active');
+});
+
 document.getElementById('form-assistencia').addEventListener('submit', function(event) {
     event.preventDefault();
 
