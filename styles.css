@@ -12,58 +12,61 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #2e7d32;
-    padding: 15px 20px;
+    padding: 10px 15px;
     position: fixed;
     width: 100%;
     z-index: 1000;
+    top: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.logo-imagem {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    margin-right: 10px;
 }
 
 header h1 {
     font-size: 1.4rem;
     color: #fff;
+    margin: 0;
 }
 
+.logo-imagem {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Botão de Ligar */
 header .botao-ligar {
     background-color: #43a047;
     color: white;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border-radius: 5px;
     font-size: 1rem;
     text-decoration: none;
 }
 
-/* Melhorando o menu para mobile */
-.mobile-nav .menu-toggle {
+/* Mobile Menu */
+.mobile-nav {
+    position: relative;
+}
+
+.menu-toggle {
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     cursor: pointer;
-}
-
-.mobile-nav {
-    position: relative;
 }
 
 .menu {
     display: none;
     list-style: none;
-    background-color: #2e7d32;
-    padding: 0;
-    margin: 0;
     position: absolute;
-    right: 20px;
+    right: 10px;
     top: 60px;
+    background-color: #2e7d32;
+    padding: 10px;
+    width: 200px;
     z-index: 1001;
-    width: 100%;
+    border-radius: 5px;
 }
 
 .menu.active {
@@ -79,8 +82,6 @@ header .botao-ligar {
     text-decoration: none;
     padding: 10px;
     display: block;
-    background-color: #43a047;
-    margin: 5px 0;
 }
 
 .menu a:hover {
@@ -90,94 +91,85 @@ header .botao-ligar {
 /* Banner */
 .banner {
     background-color: #2e7d32;
-    padding: 100px 20px;
+    padding: 80px 20px 40px; /* ajuste de padding superior */
     text-align: center;
     color: white;
-    margin-top: 60px; /* Ajuste para evitar sobreposição */
+    margin-top: 60px; /* Adicionando margem para evitar sobreposição */
 }
 
-.texto-banner h2 {
-    font-size: 2.4rem;
-    animation: fadeIn 2s ease-in-out;
+.banner h2 {
+    font-size: 2rem;
 }
 
-.texto-banner p {
+.banner p {
     font-size: 1.2rem;
-    margin: 10px 0;
-    animation: fadeIn 2.5s ease-in-out;
+    margin: 15px 0;
 }
 
-.botao-acao, .botao-ligar {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    padding: 10px 20px;
+.banner .botao-acao {
     background-color: #66bb6a;
     color: white;
+    padding: 12px 20px;
     border-radius: 5px;
+    font-size: 1.1rem;
     text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-top: 15px;
 }
 
-.botao-acao:hover, .botao-ligar:hover {
+.banner .botao-acao:hover {
     background-color: #43a047;
-    transform: translateY(-3px);
 }
 
 /* Seção Sobre */
 .sobre {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: #fff;
     text-align: center;
-    margin-top: 20px;
 }
 
 .sobre h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    animation: slideIn 1.5s ease-in-out;
 }
 
 .sobre p {
     font-size: 1.2rem;
     line-height: 1.6;
-    animation: slideIn 2s ease-in-out;
 }
 
 /* Serviços */
 .servicos {
-    padding: 60px 20px;
+    padding: 40px 20px;
     background-color: #f4f4f9;
     text-align: center;
 }
 
 .servico-lista {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 
 .servico-item {
-    width: 30%;
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
+    width: 90%;
+    max-width: 300px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.servico-item:hover {
-    transform: translateY(-5px);
 }
 
 .servico-item img {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
 .servico-item h3 {
     font-size: 1.4rem;
-    margin: 15px 0;
+    margin-bottom: 10px;
 }
 
 .servico-item p {
@@ -198,7 +190,6 @@ header .botao-ligar {
 
 .form-group {
     margin-bottom: 20px;
-    text-align: left;
 }
 
 .form-group label {
@@ -235,17 +226,6 @@ input, select, textarea {
     cursor: pointer;
 }
 
-/* Contato */
-.contato {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.contato h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
 /* Footer */
 footer {
     background-color: #2e7d32;
@@ -254,47 +234,26 @@ footer {
     padding: 20px;
 }
 
-/* Animações */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideIn {
-    from {
-        transform: translateY(20px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /* Responsividade */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.2rem;
+@media (min-width: 768px) {
+    .servico-lista {
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     .servico-item {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 30%;
     }
 
-    .texto-banner h2 {
-        font-size: 2rem;
+    .banner h2 {
+        font-size: 2.4rem;
     }
 
-    .botao-acao, .botao-ligar {
-        width: 100%;
+    .banner p {
+        font-size: 1.2rem;
     }
 
-    .menu {
-        display: block;
+    .banner .botao-acao {
+        padding: 15px 25px;
     }
 }
