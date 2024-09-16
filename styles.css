@@ -1,121 +1,169 @@
-/* Estilos gerais */
+/* Fonte padrão */
 body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
     background-color: #f9f9f9;
 }
 
 /* Header */
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     background-color: #2e7d32;
-    padding: 10px 20px;
-    flex-wrap: wrap;
+    padding: 15px 20px;
 }
 
 .logo-imagem {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
-header .botao-emergencia, header .botao-ligar {
-    background-color: #66bb6a;
+header h1 {
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+header .botao-ligar {
+    background-color: #43a047;
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
-    margin: 5px;
+    font-size: 1rem;
     text-decoration: none;
 }
 
-.botao-ligar {
-    background-color: #43a047;
-}
-
-/* Navegação Mobile */
 .mobile-nav .menu-toggle {
     background-color: transparent;
     border: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 .menu {
     display: none;
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.menu-toggle:hover + .menu {
+.menu-toggle.active + .menu {
     display: block;
+}
+
+.menu li {
+    margin: 10px 0;
 }
 
 /* Banner */
 .banner {
     background-color: #2e7d32;
-    text-align: center;
     padding: 50px 20px;
+    text-align: center;
     color: white;
 }
 
 .texto-banner h2 {
-    font-size: 2rem;
+    font-size: 2.4rem;
+}
+
+.texto-banner p {
+    font-size: 1.2rem;
+    margin: 10px 0;
 }
 
 .botao-acao, .botao-ligar {
     margin-top: 20px;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: #66bb6a;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-/* Sobre */
+/* Seção Sobre */
 .sobre {
     padding: 40px 20px;
+    background-color: #fff;
     text-align: center;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .sobre p {
     font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /* Serviços */
 .servicos {
     padding: 40px 20px;
+    background-color: #f4f4f9;
     text-align: center;
 }
 
 .servico-lista {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .servico-item {
-    width: 250px;
-    margin: 15px;
+    width: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.servico-item:hover {
+    transform: translateY(-5px);
+}
+
+.servico-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.servico-item h3 {
+    font-size: 1.4rem;
+    margin: 15px 0;
+}
+
+.servico-item p {
+    font-size: 1.1rem;
 }
 
 /* Solicitar Assistência */
 .solicitar {
     padding: 40px 20px;
-    background-color: #f4f4f9;
+    background-color: #fff;
+    text-align: center;
 }
 
 .solicitar h2 {
-    text-align: center;
-    margin-bottom: 30px;
     font-size: 2rem;
+    margin-bottom: 30px;
 }
 
 .form-group {
     margin-bottom: 20px;
+    text-align: left;
 }
 
 .form-group label {
-    display: block;
-    margin-bottom: 10px;
     font-size: 1.2rem;
+    display: block;
+    margin-bottom: 8px;
 }
 
 input, select, textarea {
@@ -123,15 +171,16 @@ input, select, textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    margin-bottom: 15px;
 }
 
 .localizacao-btn {
-    margin-top: 10px;
     background-color: #2e7d32;
     color: white;
     padding: 10px 15px;
-    border: none;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
 .botao-enviar {
@@ -143,16 +192,43 @@ input, select, textarea {
     width: 100%;
     font-size: 1.2rem;
     cursor: pointer;
-    margin-top: 20px;
+}
+
+/* Contato */
+.contato {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contato h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .menu {
-        display: block;
+    header h1 {
+        font-size: 1.2rem;
     }
 
     .servico-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .texto-banner h2 {
+        font-size: 2rem;
+    }
+
+    .botao-acao, .botao-ligar {
         width: 100%;
     }
 }

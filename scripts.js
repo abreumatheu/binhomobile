@@ -8,7 +8,7 @@ document.getElementById('form-assistencia').addEventListener('submit', function(
 Tipo de Serviço: ${tipoServico}
 Localização Atual: ${localizacao}`;
 
-    var telefone = '5511940218208'; 
+    var telefone = '5511940218208';
     var url = `https://api.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}&app_absent=0`;
     window.open(url, '_blank');
 });

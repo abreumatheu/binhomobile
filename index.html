@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Binho Guincho - Serviço de Guincho 24h em São Bernardo do Campo</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header>
         <div class="logo">
             <!-- Imagem Circular -->
-            <img src="imagens/logo.png" alt="Logo Binho Guincho" class="logo-imagem">
+            <img src="imagens/logo-binho-guincho.jpg" alt="Logo Binho Guincho" class="logo-imagem">
             <h1>Binho Guincho</h1>
         </div>
+        <a href="tel:+5511940218208" class="botao-ligar">Ligar Agora</a>
         <nav class="mobile-nav">
             <button class="menu-toggle">Menu</button>
             <ul class="menu">
@@ -23,24 +25,22 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
-        <a href="#solicitar" class="botao-emergencia">Solicitar Agora</a>
-        <a href="tel:+5511940218208" class="botao-ligar">Ligar Agora</a>
     </header>
 
-    <!-- Banner Principal com Foco na Emergência -->
+    <!-- Banner Principal -->
     <section class="banner">
         <div class="texto-banner">
             <h2>Serviço de Guincho 24h</h2>
-            <p>Atendimento rápido e eficiente em toda São Bernardo do Campo.</p>
+            <p>Atendimento rápido e eficiente em São Bernardo do Campo e região.</p>
             <a href="#solicitar" class="botao-acao">Pedir Assistência</a>
-            <a href="tel:+5511940218208" class="botao-ligar">Ligue Agora</a>
+            <a href="tel:+5511940218208" class="botao-ligar">Ligar Agora</a>
         </div>
     </section>
 
     <!-- Sobre -->
     <section id="sobre" class="sobre">
         <h2>Sobre Nós</h2>
-        <p>Binho Guinchos é uma empresa especializada em remoção de veículos, atendendo 24 horas por dia na região do Grande ABC e São Paulo. Oferecemos assistência rápida e eficiente com equipe qualificada.</p>
+        <p>Binho Guinchos é uma empresa especializada em remoção de veículos, atendendo 24 horas por dia na região do Grande ABC e São Paulo. Oferecemos assistência rápida e eficiente com uma equipe qualificada.</p>
     </section>
 
     <!-- Serviços -->
@@ -55,12 +55,12 @@
             <div class="servico-item">
                 <img src="imagens/bateria.png" alt="Recarga de Bateria">
                 <h3>Recarga de Bateria</h3>
-                <p>Assistência rápida para baterias.</p>
+                <p>Assistência rápida para baterias descarregadas.</p>
             </div>
             <div class="servico-item">
                 <img src="imagens/pneu.png" alt="Troca de Pneu">
                 <h3>Troca de Pneu</h3>
-                <p>Troca de pneus com segurança.</p>
+                <p>Troca de pneus rápida e segura.</p>
             </div>
         </div>
     </section>
@@ -69,7 +69,6 @@
     <section id="solicitar" class="solicitar">
         <h2>Solicitar Assistência</h2>
         <form id="form-assistencia">
-            <!-- Tipo de Serviço -->
             <div class="form-group">
                 <label for="tipo-servico">1. Qual serviço você precisa?</label>
                 <select id="tipo-servico" name="tipo-servico" required>
@@ -81,14 +80,12 @@
                 </select>
             </div>
 
-            <!-- Localização Atual com Geolocalização -->
             <div class="form-group">
                 <label for="localizacao">2. Sua localização atual:</label>
                 <input type="text" id="localizacao" name="localizacao" placeholder="Clique para pegar sua localização" required>
-                <button type="button" id="localizacao-btn" class="localizacao-btn" onclick="obterLocalizacao()">Usar minha localização</button>
+                <button type="button" id="localizacao-btn" class="localizacao-btn" onclick="obterLocalizacao()">Usar localização atual</button>
             </div>
 
-            <!-- Botão de Envio -->
             <button type="submit" class="botao-enviar">Solicitar Assistência</button>
         </form>
     </section>
