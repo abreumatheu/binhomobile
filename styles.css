@@ -40,6 +40,7 @@ header .botao-ligar {
     text-decoration: none;
 }
 
+/* Melhorando o menu para mobile */
 .mobile-nav .menu-toggle {
     background-color: transparent;
     border: none;
@@ -48,19 +49,42 @@ header .botao-ligar {
     cursor: pointer;
 }
 
+.mobile-nav {
+    position: relative;
+}
+
 .menu {
     display: none;
     list-style: none;
+    background-color: #2e7d32;
     padding: 0;
     margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    z-index: 1001;
+    width: 100%;
 }
 
-.menu-toggle.active + .menu {
+.menu.active {
     display: block;
 }
 
 .menu li {
     margin: 10px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    background-color: #43a047;
+    margin: 5px 0;
+}
+
+.menu a:hover {
+    background-color: #66bb6a;
 }
 
 /* Banner */
@@ -69,6 +93,7 @@ header .botao-ligar {
     padding: 100px 20px;
     text-align: center;
     color: white;
+    margin-top: 60px; /* Ajuste para evitar sobreposição */
 }
 
 .texto-banner h2 {
@@ -103,6 +128,7 @@ header .botao-ligar {
     padding: 60px 20px;
     background-color: #fff;
     text-align: center;
+    margin-top: 20px;
 }
 
 .sobre h2 {
